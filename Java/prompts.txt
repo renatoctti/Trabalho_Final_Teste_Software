@@ -1,0 +1,84 @@
+Prompt 1 (testes)
+
+Você agora assume o papel de **Senior QA Engineer especializado em Java, JUnit5, TDD e Mutation Testing**, com domínio de JaCoCo e PIT.
+Sua tarefa:
+Gerar uma **suíte completa de testes unitários JUnit 5** para o código abaixo, garantindo **100% de cobertura real** (confirmada com JaCoCo) e alta taxa de mutação (PIT).
+O objetivo é cobrir todos os comportamentos do método updateQuality() do Gilded Rose.
+IMPORTANTE:
+Antes de gerar o código final, **pense passo a passo internamente**, mas NÃO revele o raciocínio (chain-of-thought).  
+Me entregue apenas a resposta final correta.
+Requisitos dos testes:
+1. Cobertura total incluindo:
+   - Itens comuns
+   - Aged Brie
+   - Backstage passes (todos os limites: >10, 10, 5, 0, negativo)
+   - Sulfuras (imutável)
+   - Qualidade mínima (0) e máxima (50)
+   - Casos com sellIn positivo, zero e negativo
+2. Use nomes de testes claros e padronizados.
+3. Utilize o padrão AAA (Arrange–Act–Assert).
+4. Não duplique lógica da classe original nos testes.
+5. Pode utilizar testes parametrizados quando fizer sentido.
+6. Gere TODOS os testes dentro de 1 arquivo de teste ou dividido em classes — escolha a solução mais limpa.
+7. Me entregue também: 
+   ✔ instruções de como rodar com Maven  
+   ✔ sugestão de estrutura de diretórios  
+   ✔ qualquer recomendação adicional
+
+segue o codigo
+
+
+Prompt 2 (refatoracao)
+
+Assuma o papel de **Arquiteto de Software Sênior especialista em Java, Clean Code, SOLID e refatoração de legados complexos**.  
+Sua missão é transformar o código abaixo do Gilded Rose em uma versão muito mais limpa, modular e sustentável, sem alterar NENHUM comportamento original.
+
+INSTRUÇÕES DA REFACTORING:
+
+1. Preserve 100% do comportamento atual.  
+   – A lógica do sistema NÃO pode mudar.  
+   – Somente a organização interna do código deve melhorar.
+
+2. Aplique princípios de Clean Code:
+   • SRP (responsabilidade única)  
+   • OCP (aberto para extensão, fechado para modificação)  
+   • Código expressivo e nomes claros  
+   • Eliminar condicionais gigantes e duplicações
+
+3. Utilize padrões de projeto adequados:
+   • **Strategy Pattern** para encapsular regras de atualização de qualidade de cada tipo de item  
+   • **Factory Method** ou **Simple Factory** para selecionar a estratégia certa  
+   • Opcional: Template Method, caso faça sentido  
+   • Mantenha o design extensível: novos itens devem ser adicionados facilmente
+
+4. Entregáveis:
+   ✔ Código refatorado completo (todas as classes novas)  
+   ✔ Diagrama textual da nova arquitetura (ex: lista de classes, responsabilidades, fluxos)  
+   ✔ Explicação das melhorias aplicadas (Clean Code + SOLID)  
+   ✔ Justificativa dos padrões de projeto escolhidos  
+   ✔ Sugestão de estrutura de pastas
+
+IMPORTANTE:  
+Antes de gerar a solução final, **pense passo a passo internamente** sobre a melhor reorganização do código, mas NÃO revele o chain-of-thought.  
+Apenas me entregue o resultado final.
+
+Agora vou enviar o código. 
+
+
+Prompt 3 (bdd)
+
+Gere cenários BDD (Gherkin) completos para a lógica abaixo. Quero cenários cobrindo todos os comportamentos possíveis, incluindo casos de borda:
+* itens comuns
+* Aged Brie
+* Backstage Passes
+* Sulfuras
+* Conjured
+Regras importantes do Gilded Rose que devem ser respeitadas:
+* quality nunca é negativa
+* quality nunca passa de 50 (exceto Sulfuras)
+* sellIn diminui diariamente, exceto Sulfuras
+* Conjured deteriora o dobro
+* Backstage aumenta progressivamente e vira 0 após o show
+* Aged Brie aumenta com o tempo
+Responda somente em Gherkin, com Features separadas. Não explique nada além dos cenários.
+Aqui está o código para análise:
