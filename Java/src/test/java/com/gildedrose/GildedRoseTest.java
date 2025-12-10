@@ -23,6 +23,7 @@ class GildedRoseTest {
     @Test
     void commonItem_shouldDecreaseQualityByTwo_whenSellInExpired() {
         Item[] items = {new Item("Common Item", 0, 20)};
+        // ❌ DUPLICATE CODE: Padrão de setup repetido em TODOS os testes
         GildedRose app = new GildedRose(items);
 
         app.updateQuality();
@@ -363,5 +364,8 @@ class GildedRoseTest {
         assertEquals(31, items[1].quality);
         assertEquals(80, items[2].quality);
         assertEquals(42, items[3].quality);
+        // ❌ ASSERTION ROULETTE: 4 assertions sem mensagens - qual falhou?
+    
     }
+    
 }
